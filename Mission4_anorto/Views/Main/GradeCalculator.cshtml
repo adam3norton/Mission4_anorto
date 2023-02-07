@@ -1,0 +1,36 @@
+﻿@{
+    ViewData["Title"] = "Grade Calculator";
+}
+
+@model GradeCalculator
+
+<div class="text-center">
+    <h1 class="display-4">Grade Calculator</h1>
+    <section style="display: grid; place-items: center;">
+        <div style="background-color: #ffffff; box-shadow: 0px 5px 15px #00000020; border-radius: 20px; min-height: 300px;
+                    max-width: 800px; padding: 20px;">
+            <p>Input the percentage * 10 of each section that you've earned</p>
+            <p>EG: If you have 90% in your group projects section, type 90</p>
+            <form method="post" style="display: grid; grid-template-columns: auto auto auto auto;">
+                <label>Assignments:</label>
+                <input id="asgn" asp-for="AssignmentsPercent" />
+                <label>Group Projects: </label>
+                <input id="group" asp-for="GroupPercent" />
+                <label>Quizzes: </label>
+                <input id="quiz" asp-for="QuizPercent" />
+                <label>Midterm: </label>
+                <input id="mid" asp-for="MidtermPercent" />
+                <label>Final: </label>
+                <input id="fin" asp-for="FinalPercent" />
+                <label>Intex: </label>
+                <input id="intex" asp-for="IntexPercent" />
+
+                <div style="display: grid; place-items: center;">
+                    <input class="submit-btn" id="submitBtn" type="submit" value="Submit" />
+                </div>
+
+                <div asp-validation-summary="All"></div>
+            </form>
+        </div>
+    </section>
+</div>

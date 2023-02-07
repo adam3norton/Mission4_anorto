@@ -1,0 +1,12 @@
+﻿body {
+}
+
+.submit-btn {
+    min-height: 50px;
+    min-width: 100px;
+    border: none;
+    background: #2c2970;
+    color: #fff;
+    border-radius: 12px;
+    width: 100%;
+}

@@ -1,14 +1,15 @@
-﻿document.getElementById('submitBtn').addEventListener('click', function () {
+﻿jQuery(function ($) {
+$('#submitBtn').on('click', function () {
+    console.log("Running!");
+    var asgn = +$('#asgn').val();
+    var group = +$('#group').val();
+    var quiz = +$('#quiz').val();
+    var mid = +$('#mid').val();
+    var fin = +$('#fin').val();
+    var intex = +$('#intex').val();
 
-    asgn = +document.getElementById('asgn').value;
-    group = +document.getElementById('group').value;
-    quiz = +document.getElementById('quiz').value;
-    mid = +document.getElementById('mid').value;
-    fin = +document.getElementById('fin').value;
-    intex = +document.getElementById('intex').value;
-
-    let grade = (0.5 * asgn) + (0.1 * group) + (0.1 * quiz) + (0.1 * mid) + (0.1 * fin) + (0.1 * intex);
-    let letter = '';
+    var grade = (0.5 * asgn) + (0.1 * group) + (0.1 * quiz) + (0.1 * mid) + (0.1 * fin) + (0.1 * intex);
+    var letter = '';
 
     if (grade >= 94) {
         letter = 'A'
@@ -29,7 +30,8 @@
         letter = 'Bad grade ://';
     }
 
-    alert(grade);
-    alert(letter);
+    alert(grade + ': ' + letter);
+
+})
 
 })
